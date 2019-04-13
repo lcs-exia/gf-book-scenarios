@@ -20,13 +20,13 @@ public class Key extends Actor
         {
             // Key is down
             setImage("white-key-down.png");
+            play();
         }
         else
         {
             // Key is up
             setImage("white-key.png");
         }
-        
     }
     
     /**
