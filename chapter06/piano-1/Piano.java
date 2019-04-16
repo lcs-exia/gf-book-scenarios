@@ -43,12 +43,13 @@ public class Piano extends World
      */
     public void act() 
     {
-        // Say "hello" to a different person each second
-        if ((frames % 60 == 0) && (frames / 60 < 16))
+        // This block of code runs once per second until the end of the array
+        int position = frames / 60;
+        if ((frames % 60 == 0) && (position < 16))
         {
             // // Only show a message when we are in the bounds of the array
-            // showText("Array index is: " + frames / 60, 400, 250);
-
+            showText("Array index is: " + position, 400, 250);
+            
             // // Only say hello when we are in the bounds of the array
             // // Say hello to everyone in the class
             // showText("Hello " + peopleInClass[frames / 60], 400, 170);
