@@ -9,7 +9,8 @@ import greenfoot.*;
 public class Block extends Actor
 {
     private int delta = 2;
-    
+    private int y;
+    private int x;
     /**
      * Move across the screen, bounce off edges. Turn leaves, if we touch any.
      */
@@ -36,12 +37,13 @@ public class Block extends Actor
         if (isAtEdge()) 
         {
             delta = -delta;  // reverse direction
-            
+            x = getX();
+            y = getY();
             // Add a new Leaf object to the world
             // 1. Add a reference to the World
             World myWorld = getWorld();
             // 2. Use the object reference to call, or use, a method on the World object
-            myWorld.addObject(new Leaf(), 100, 100);
+            myWorld.addObject(new Leaf(), x, y);
         }
     }
     
