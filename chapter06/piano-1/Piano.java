@@ -25,8 +25,8 @@ public class Piano extends World
     // Second array tracks the sounds files for each note
     String[] whiteNotes = {"3c", "3d", "3e", "3f", "3g", "3a", "3b", "4c", "4d",
             "4e", "4f", "4g"};
-    String[] blackKeys = {"w", "e", "t", "y", "u", "o", "p", "]"};
-    String[] blackNotes = {"3c#", "3d#", "3f#", "3g#", "3a#", "4c#", "4d#", "4f#"};
+    // String[] blackKeys = {"w", "e", "t", "y", "u", "o", "p", "]"};
+    // String[] blackNotes = {"3c#", "3d#", "3f#", "3g#", "3a#", "4c#", "4d#", "4f#"};
 
     /**
      * Make the piano.
@@ -58,12 +58,12 @@ public class Piano extends World
             // Now actually add the object to the world
             // OBJECT TO ADD    HORIZONTAL POSITION VERTICAL POSITION
             addObject(aKey, 54 + position * 63, 140);
-            
             // // Only say hello when we are in the bounds of the array
             // // Say hello to everyone in the class
             // showText("Hello " + peopleInClass[frames / 60], 400, 170);
 
         }
+        
 
         // Track frames
         frames += 1;
